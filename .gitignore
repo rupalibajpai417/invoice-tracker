@@ -22,3 +22,24 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# Environment variables - NEVER commit these
+.env
+.env.local
+.env.production
+
+# VS Code settings
+.vscode/
+
+# MacOS rubbish
+.DS_Store
+
+# Java build files
+target/
+*.class
+
+# Node modules (frontend dependencies - too large to commit)
+node_modules/
+
+# Logs
+*.log
