@@ -42,4 +42,4 @@ target/
 node_modules/
 
 # Logs
-*.log
+*.logbackend-api/src/main/resources/application.properties
