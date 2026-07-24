@@ -16,11 +16,12 @@ public class Client {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message = "Client name is required")
-    private String name;
+    private String contactPerson;
 
     @NotBlank(message = "Company name is required")
     private String companyName;
+
+    private String taxId;
 
     @Email(message = "Invalid email format")
     @NotBlank(message = "Email is required")
@@ -35,23 +36,25 @@ public class Client {
     public Client() {
     }
 
-    public Client(String name,
+    public Client(String contactPerson,
                     String companyName,
+                    String taxId,
                     String email,
                     String phone) {
 
-                this.name = name;
+                this.contactPerson = contactPerson;
                 this.companyName = companyName;
+                this.taxId = taxId;
                 this.email = email;
                 this.phone = phone;
             }
 
-    public String getName() {
-        return name;
+    public String getContactPerson() {
+        return contactPerson;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setContactPerson(String contactPerson) {
+        this.contactPerson = contactPerson;
     }
 
     public Long getId() {
@@ -64,6 +67,14 @@ public class Client {
 
     public String getCompanyName() {
         return companyName;
+    }
+
+    public String getTaxId() {
+        return taxId;
+    }
+
+    public void setTaxId(String taxId) {
+        this.taxId = taxId;
     }
 
     public void setCompanyName(String companyName) {
